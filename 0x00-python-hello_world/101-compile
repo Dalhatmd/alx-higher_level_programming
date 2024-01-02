@@ -1,2 +1,2 @@
 #!/bin/bash
-pyinstaller "$PYFILE"
+python -m compileall -b "$PYFILE"
