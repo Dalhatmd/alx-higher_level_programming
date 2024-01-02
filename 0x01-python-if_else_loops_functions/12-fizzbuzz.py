@@ -8,4 +8,4 @@ def fizzbuzz():
             output += "Buzz"
         if output == '':
             output = i
-        print(output)
+        print(output, end=' ')
