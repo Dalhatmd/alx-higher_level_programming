@@ -1,2 +1,2 @@
-#!/usr/bin/bash
-pyinstaller $PYFILE
+#!/bin/bash
+pyinstaller "$PYFILE"
