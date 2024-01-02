@@ -6,3 +6,6 @@
 <br>
 <h6>2-print.py</h6>
 <p> A python script that prints text </p>
+<br>
+<h6> 3-print_number.py</h6>
+<p> A python script that prints a number</p>
