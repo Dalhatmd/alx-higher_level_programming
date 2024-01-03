@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-def uppercase(str)
-    for i in str:
-        i = ord(i)
-        if i < 97:
-            i += 
+def uppercase(word):
+    result = ''
+    for letter in word:
+        asc = ord(letter)
+        if 97 <= asc <= 122:
+            asc -= 32
+        result += chr(asc)
+    return result
