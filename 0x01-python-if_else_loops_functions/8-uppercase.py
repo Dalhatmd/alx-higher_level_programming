@@ -6,4 +6,5 @@ def uppercase(word):
         if 97 <= asc <= 122:
             asc -= 32
         result += chr(asc)
+    print("{}".format(result))
     return result
