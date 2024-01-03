@@ -11,6 +11,10 @@ int check_cycle(listint_t *list)
 	listint_t *var;
 	listint_t *check;
 
+	if (list == NULL)
+	{
+		return (0);
+	}
 	var = list;
 	check = list;
 	while (var != NULL)
