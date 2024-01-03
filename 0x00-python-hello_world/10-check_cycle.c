@@ -9,9 +9,10 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *var;
-	listint_t *check = NULL;
+	listint_t *check;
 
 	var = list;
+	check = list;
 	while (var != NULL)
 	{
 		var = var->next;
