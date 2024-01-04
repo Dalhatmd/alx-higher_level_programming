@@ -6,7 +6,9 @@ if __name__ == "__main__":
     i = 1
     if num == 1:
         print("{} arguments.".format(num - 1))
-    if num > 1:
+    if num == 2:
+        print("{} argument.".format(num - 1))
+    if num > 2:
         print("{} arguments:".format(num - 1))
         for arg in args[1:]:
             print("{}: {}".format(i, arg))
