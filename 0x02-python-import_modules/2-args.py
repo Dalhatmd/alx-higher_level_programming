@@ -7,9 +7,10 @@ if __name__ == "__main__":
     if num == 1:
         print("{} arguments.".format(0))
     elif num == 2:
-        print("{} argument.".format(num - 1))
+        print("{} argument:".format(num - 1))
     elif num > 2:
         print("{} arguments:".format(num - 1))
-    for arg in args[1:]:
-        print("{}: {}".format(i, arg))
-        i += 1
+    if num >= 2:
+        for arg in args[1:]:
+            print("{}: {}".format(i, arg))
+            i += 1
