@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import sys
+num = len(sys.argv)
+args = sys.argv
+i = 1
+if num == 1:
+    print("{} arguments.".format(num - 1))
+if num > 1:
+    print("{} arguments:".format(num - 1))
+    for arg in args[1:]:
+        print("{}: {}".format(i, arg))
+        i += 1
