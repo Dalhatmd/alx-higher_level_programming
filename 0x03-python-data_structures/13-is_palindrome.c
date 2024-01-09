@@ -10,42 +10,34 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head;
-	listint_t *reverse = NULL;
-	listint_t **list = NULL;
-	int i = 0;
-	int j, k;
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *second_half;
 
-	while (current != NULL)
+	while (fast != NULL && fast->next != NULL)
 	{
-		current = current->next;
-		i++;
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	list = malloc(i * sizeof(listint_t *));
-	if (list == NULL)
-		return 0;
-	current = *head;
-	for (j = 0; j < i; j++)
+	if (fast)
+		slow = slow->next;
+	second_half = reverse_list(slow);
+	while (second_half != NULL)
 	{
-		list[j] = current;
-		current = current->next;
-	}
-	reverse = reverse_list(*head);
-	for (k = 0; k < i; k++)
-	{
-		if (reverse->n != list[k]->n)
+		if ((*head)->n != second_half->n)
 		{
-			free(list);
-			return 0;
+			reverse_list(second_half);
+			return (0);
 		}
-		reverse = reverse->next;
+		*head = (*head)->next;
+		second_half = second_half->next;
 	}
-	free(list);
-	return 1;
+	reverse_list(second_half);
+	return (1);
 }
 
 /**
- * *reverse_list - Reverses a linked list
+ * *reverse_list - Reverses second half of a linked list
  *
  * @head: head of the list
  *
