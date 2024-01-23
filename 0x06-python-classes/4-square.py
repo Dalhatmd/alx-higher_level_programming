@@ -2,11 +2,12 @@
 # 4-square.py by Dalhatmd
 """Defines a square"""
 
+
 class Square:
     """Square blueprint"""
 
     def __init__(self, size=0):
-        """ initializer for the square 
+        """ initializer for the square
         Args: size - size of the square
         Raises:
             TypeError: if size is not int
@@ -27,7 +28,7 @@ class Square:
     @size.setter
     def size(self, value):
         """ size setter to set size
-        Args: value - value to be set as size 
+        Args: value - value to be set as size
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
