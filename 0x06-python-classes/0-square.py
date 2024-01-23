@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#0-square.py by Dalhatmd
+# 0-square.py by Dalhatmd
 """Defines a square class"""
 
 
