@@ -2,12 +2,14 @@
 # 5-square.py by Dalhatmd
 """Defines a square"""
 
+
 class Square:
     """Square blueprint"""
 
     def __init__(self, size=0):
         """ initializer for the square
-        Args: size - size of the square                                        Raises:
+        Args: size - size of the square
+        Raises:
             TypeError: if size is not int
             ValueError: if size is not positive or 0
         """
@@ -39,12 +41,13 @@ class Square:
         Returns: The area of the square
         """
         return (self.__size * self.__size)
+
     def my_print(self):
         """Function that prints the square"""
         if self.__size == 0:
             print()
         else:
-            for i in range (self.__size):
+            for i in range(self.__size):
                 for j in range(self.__size):
                     print("#", end='')
                 print()
