@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+#0-square.py by Dalhatmd
+"""Defines a square class"""
+
+
 class Square:
-    """ An empty class that describes a square
-    """
+    """Passes"""
     pass
