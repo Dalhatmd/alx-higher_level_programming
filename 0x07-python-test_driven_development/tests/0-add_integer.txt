@@ -1,5 +1,13 @@
-from 0-add_integer import add_integer 
+>>> add_integer = __import__('0-add_integer').add_integer
 
 >>> add_integer(4, 6)
 10
- 
+
+>>> add_integer('hello', 7)
+ValueError: a must be an integer
+
+>>add_integer(-7, -8)
+-15
+
+>>> add_integer(5)
+103
