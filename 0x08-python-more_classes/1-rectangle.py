@@ -1,11 +1,18 @@
 #!/usr/bin/python3
-""" an empty rectangle definition """
+""" an rectangle definition """
 
 
 class Rectangle:
     """ An empty rectangle class """
     def __init__(self, width=0, height=0):
-        """ initialiser for a rectangle """
+        """ initialiser for a rectangle
+        Args:
+            Width - width of the rectangle
+            height - height of the rectangle
+        Raises:
+            typeError: if width or heigjt are not ints
+            ValueError: if height or width are less than 0
+            """
         self.__width = width
         self.__height = height
 
