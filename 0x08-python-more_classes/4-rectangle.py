@@ -48,10 +48,15 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """ prints a string representation of the rectangle """
+        """ prints a string representation of the string """
         rect = ''
         if self.__height == 0 or self.__width == 0:
             return ""
         for i in range(self.__height):
             rect += '#' * self.width + '\n'
         return rect
+
+    def __repr__(self):
+        """ returns a string representation to use eval to
+        create a new rectangle """
+        return f"Rectangle ({self.width}, {self.height})"
