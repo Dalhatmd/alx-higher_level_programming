@@ -1,13 +1,39 @@
->>> add_integer = __import__('0-add_integer').add_integer
+Test cases for 0-add_integer script
+====================================
 
->>> add_integer(4, 6)
-10
+The function takes 2 numbers and returns their sums
 
->>> add_integer('hello', 7)
-ValueError: a must be an integer
+usage
+======
 
->>add_integer(-7, -8)
--15
+importing function:
+	>>> add_integer = __import__('0-add_integer').add_integer
 
->>> add_integer(5)
-103
+Add 2 postive integers (a = 4 and b = 6):
+	>>> add_integer(4, 6)
+	10
+
+adding a string and a number (a = 'hello' and b = 7):
+	>>> add_integer('hello', 7)
+	Traceback (most recent call last):
+		...
+	ValueError: a must be an integer
+
+adding two negative numbers (a = -7 and b = -8)
+	>>> add_integer(-7, -8)
+	-15
+
+adding only one number to the default value (a = 5)
+	>>> add_integer(5)
+	103
+
+adding a positive and negative number (a = 4 and b = -4)
+	>>> add_integer(4, -4)
+	0
+
+not inputing any number
+	>>> add_integer()
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
