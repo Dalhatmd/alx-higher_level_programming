@@ -1,0 +1,14 @@
+Tests for module 2-matrix_divided.py
+===================================
+
+usage
+=====
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+	>>> matrix = [
+	... [2, 5, 6],
+	... [5, 9, 8]
+	... ]
+	>>> print(matrix_divided(matrix, 2))
+	[[], [1.0, 2.5, 3.0], [2.5, 4.5, 4.0]]
