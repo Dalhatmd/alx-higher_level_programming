@@ -4,9 +4,6 @@
 
 class BaseGeometry:
     """ A badegeometry class"""
-    def __init__(self):
-        """ initializer """
-        pass
 
     def area(self):
         """ Raises an exception """
