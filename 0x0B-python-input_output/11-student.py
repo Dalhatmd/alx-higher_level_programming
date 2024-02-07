@@ -27,4 +27,4 @@ class Student:
         """ Reloads attribute values from a json file """
         for attr_name, attr_value in json.items:
             if hasattr(self, attr_name):
-                setattr(self, attr_value)
+                setattr(self, attr_name, attr_value)
