@@ -6,4 +6,4 @@ def read_file(filename=""):
     """ Reads a file """
     with open(filename, "r") as file:
         data = file.read()
-        print(data)
+        print(data, end='')
