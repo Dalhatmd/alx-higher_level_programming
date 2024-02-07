@@ -25,6 +25,6 @@ class Student:
 
     def reload_from_json(self, json):
         """ Reloads attribute values from a json file """
-        for attr_name, attr_value in json.items:
+        for attr_name, attr_value in json.items():
             if hasattr(self, attr_name):
                 setattr(self, attr_name, attr_value)
