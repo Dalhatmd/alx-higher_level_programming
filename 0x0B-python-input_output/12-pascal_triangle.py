@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """ Returrns pascal's triangle"""
     triangle = []
     for row in range(n):
         current_row = []
