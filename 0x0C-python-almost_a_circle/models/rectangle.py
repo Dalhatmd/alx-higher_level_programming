@@ -71,9 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ Returns area of the rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """Displays a rectangle based on parameters"""
         for i in range(self.__x):
             print('')
         for column in range(self.__height):
@@ -85,6 +87,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """Updates the class """
         if args:
             if len(args) > 0:
                 self.id = args[0]
