@@ -33,3 +33,12 @@ class Base:
                 json_string = Base.to_json_string(list_dict)
                 file.write(json_string)
 
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            import json
+            data_list = json.loads(json_string)
+            return list(data_list)
+
