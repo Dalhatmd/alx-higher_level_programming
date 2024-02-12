@@ -3,6 +3,8 @@
 
 
 from models.base import Base
+
+
 class Rectangle(Base):
     """ A rectangle blueprint"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -59,15 +61,15 @@ class Rectangle(Base):
     def y(self):
         """ y getter"""
         return self.__y
+
     @width.setter
     def width(self, value):
         """ width setter """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("width must be > 0")
         self.__width = value
-
 
     @height.setter
     def height(self, value):
@@ -75,9 +77,8 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >= 0")
+            raise ValueError("height must be > 0")
         self.__height = value
-
 
     @x.setter
     def x(self, value):
@@ -111,7 +112,9 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """String representation of the class"""
+        return f"[Rectangle] ({self.id})\
+    {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """Updates the class """
@@ -134,4 +137,6 @@ class Rectangle(Base):
             self.__y = kwargs.get("y", self.__y)
 
     def to_dictionary(self):
-        return {"id" : self.id, "width" : self.__width, "height" : self.__height, "x" : self.__x, "y" : self.__y}
+        """ To dictionary"""
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
