@@ -64,3 +64,39 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads from a csv file """
+        import csv
+        instances = []
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, 'r') as csvfile:
+                reader = csv.reader(csvfile)
+                for row in reader:
+                    if cls.__name__ == 'Rectangle':
+                        instances.append(cls.create(
+                            id=int(row[0]), width=int(row[1]),
+                            height=int(row[2]), x=int(row[3]), y=int(row[4])))
+                    elif cls.__name__ == 'Square':
+                        instances.append(cls.create(
+                            id=int(row[0], size=int(row[1]),
+                                   x=int(row[2]), y=int(row[3]))))
+        except ModuleNotFoundError:
+            pass
+        return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves to a csv file """
+        import csv
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for obj in list_objs:
+                if csv.__name__ == 'Rectangle':
+                    writer.writerow([obj.id, obj.width,
+                                     obj.height, obj.x, obj.y])
+                elif csv.__name__ == 'Square':
+                    writer.writeror([obj.id, obj.size, obj.x, obj.y])
