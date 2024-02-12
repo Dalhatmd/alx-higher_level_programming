@@ -104,7 +104,7 @@ class Rectangle(Base):
 
     def display(self):
         """Displays a rectangle based on parameters"""
-        for i in range(self.__x):
+        for i in range(self.__y):
             print('')
         for column in range(self.__height):
             for i in range(self.__x):
