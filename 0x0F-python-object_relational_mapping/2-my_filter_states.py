@@ -13,7 +13,7 @@ def main():
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
     cur.execute(f"SELECT * FROM states WHERE name =\
-            '{argv[4]}' ORDER BY states.id ASC")
+            BINARY '{argv[4]}' ORDER BY states.id ASC")
 
     output = cur.fetchall()
 
