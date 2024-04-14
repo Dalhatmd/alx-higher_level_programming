@@ -12,8 +12,10 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute(f"SELECT * FROM states WHERE name=\
-            BINARY '{argv[4]}' ORDER BY states.id ASC;")
+    sql_query = "SELECT * FROM states WHERE name=\
+            BINARY %s ORDER BY states.id ASC"
+
+    cur.execute(sql_query, (argv[4],))
     output = cur.fetchall()
 
     for row in output:
