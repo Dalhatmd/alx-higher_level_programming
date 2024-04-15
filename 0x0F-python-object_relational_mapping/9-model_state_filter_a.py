@@ -16,7 +16,7 @@ def main():
 
     query = session.query(State.id, State.name)\
         .order_by(State.id)\
-        .filter(State.name.like('%a')).all()
+        .filter(State.name.contains('a')).all()
 
     for i, state in query:
         print(f"{i}: {state}")
