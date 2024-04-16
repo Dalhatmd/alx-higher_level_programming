@@ -19,7 +19,7 @@ def main():
     session.commit()
 
     query = session.query(State.id).filter(State.name.like(
-        "Lousiana")).scalar()
+        "Louisiana")).scalar()
     print(query)
 
 
