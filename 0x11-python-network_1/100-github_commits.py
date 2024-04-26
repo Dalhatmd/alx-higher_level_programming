@@ -15,7 +15,11 @@ if __name__ == "__main__":
     r = requests.get(commits_url)
     commits = r.json()
 
+    count = 0
     for commit in commits:
+        if count >= 10:
+            break
         commit_sha = commit.get('sha')
         author_name = commit['commit']['author'].get('name')
         print(f"{commit_sha}: {author_name}")
+        count += 1
