@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Doc """
+""" Prints the response to a get request"""
 import urllib.request
 
 
