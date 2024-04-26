@@ -6,7 +6,7 @@ import sys
 
 
 if __name__ == "__main__":
-    data = {"emal": sys.argv[2]}
+    data = {"email": sys.argv[2]}
     post_data = urllib.parse.urlencode(data)
     post_data = post_data.encode('ascii')
 
