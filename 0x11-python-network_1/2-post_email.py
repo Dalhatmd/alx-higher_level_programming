@@ -12,6 +12,4 @@ if __name__ == "__main__":
 
     r = urllib.request.Request(sys.argv[1], post_data)
     with urllib.request.urlopen(r) as response:
-        page = response.read()
-
-    print("Your email is: {}".format(page))
+        page = response.read().decode('utf-8')
