@@ -3,6 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """ appends a file """
     with open(filename, 'a+') as file:
         for i in file:
             if i == search_string:
